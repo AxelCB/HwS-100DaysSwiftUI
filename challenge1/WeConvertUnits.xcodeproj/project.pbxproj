@@ -11,6 +11,8 @@
 		A623220C278BB33F00939398 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623220B278BB33F00939398 /* ContentView.swift */; };
 		A623220E278BB34000939398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A623220D278BB34000939398 /* Assets.xcassets */; };
 		A6232211278BB34000939398 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6232210278BB34000939398 /* Preview Assets.xcassets */; };
+		A66DDE85278BB44700492EE8 /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66DDE84278BB44700492EE8 /* UnitConverter.swift */; };
+		A66DDE88278BD5E600492EE8 /* TemperatureConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66DDE87278BD5E600492EE8 /* TemperatureConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		A623220B278BB33F00939398 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A623220D278BB34000939398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6232210278BB34000939398 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A66DDE84278BB44700492EE8 /* UnitConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverter.swift; sourceTree = "<group>"; };
+		A66DDE87278BD5E600492EE8 /* TemperatureConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		A6232208278BB33F00939398 /* WeConvertUnits */ = {
 			isa = PBXGroup;
 			children = (
+				A66DDE86278BD5D900492EE8 /* Model */,
 				A6232209278BB33F00939398 /* WeConvertUnitsApp.swift */,
 				A623220B278BB33F00939398 /* ContentView.swift */,
 				A623220D278BB34000939398 /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				A6232210278BB34000939398 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A66DDE86278BD5D900492EE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A66DDE84278BB44700492EE8 /* UnitConverter.swift */,
+				A66DDE87278BD5E600492EE8 /* TemperatureConverter.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A66DDE85278BB44700492EE8 /* UnitConverter.swift in Sources */,
 				A623220C278BB33F00939398 /* ContentView.swift in Sources */,
 				A623220A278BB33F00939398 /* WeConvertUnitsApp.swift in Sources */,
+				A66DDE88278BD5E600492EE8 /* TemperatureConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
