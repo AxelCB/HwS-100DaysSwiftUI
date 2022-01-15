@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1317892027921A0A0043A57D /* TimeConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1317891F27921A0A0043A57D /* TimeConverterView.swift */; };
+		1317892227921A150043A57D /* TemperatureConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1317892127921A150043A57D /* TemperatureConverterView.swift */; };
+		1317892427921A240043A57D /* LengthConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1317892327921A240043A57D /* LengthConverterView.swift */; };
+		1317892627921A390043A57D /* VolumeConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1317892527921A390043A57D /* VolumeConverterView.swift */; };
 		13199FBF278E260900930192 /* TimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13199FBE278E260900930192 /* TimeConverter.swift */; };
+		13199FC2278E273000930192 /* ConverterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13199FC1278E273000930192 /* ConverterSelectionView.swift */; };
 		A623220A278BB33F00939398 /* WeConvertUnitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6232209278BB33F00939398 /* WeConvertUnitsApp.swift */; };
 		A623220C278BB33F00939398 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623220B278BB33F00939398 /* ContentView.swift */; };
 		A623220E278BB34000939398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A623220D278BB34000939398 /* Assets.xcassets */; };
@@ -17,7 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1317891F27921A0A0043A57D /* TimeConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConverterView.swift; sourceTree = "<group>"; };
+		1317892127921A150043A57D /* TemperatureConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverterView.swift; sourceTree = "<group>"; };
+		1317892327921A240043A57D /* LengthConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthConverterView.swift; sourceTree = "<group>"; };
+		1317892527921A390043A57D /* VolumeConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeConverterView.swift; sourceTree = "<group>"; };
 		13199FBE278E260900930192 /* TimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConverter.swift; sourceTree = "<group>"; };
+		13199FC1278E273000930192 /* ConverterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterSelectionView.swift; sourceTree = "<group>"; };
 		A6232206278BB33F00939398 /* WeConvertUnits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeConvertUnits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6232209278BB33F00939398 /* WeConvertUnitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeConvertUnitsApp.swift; sourceTree = "<group>"; };
 		A623220B278BB33F00939398 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +48,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13199FC0278E271900930192 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13199FC1278E273000930192 /* ConverterSelectionView.swift */,
+				1317892327921A240043A57D /* LengthConverterView.swift */,
+				1317891F27921A0A0043A57D /* TimeConverterView.swift */,
+				1317892127921A150043A57D /* TemperatureConverterView.swift */,
+				1317892527921A390043A57D /* VolumeConverterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A62321FD278BB33F00939398 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +79,7 @@
 		A6232208278BB33F00939398 /* WeConvertUnits */ = {
 			isa = PBXGroup;
 			children = (
+				13199FC0278E271900930192 /* View */,
 				A66DDE86278BD5D900492EE8 /* Model */,
 				A6232209278BB33F00939398 /* WeConvertUnitsApp.swift */,
 				A623220B278BB33F00939398 /* ContentView.swift */,
@@ -156,7 +179,12 @@
 			files = (
 				A66DDE85278BB44700492EE8 /* UnitConverter.swift in Sources */,
 				A623220C278BB33F00939398 /* ContentView.swift in Sources */,
+				1317892227921A150043A57D /* TemperatureConverterView.swift in Sources */,
 				A623220A278BB33F00939398 /* WeConvertUnitsApp.swift in Sources */,
+				13199FC2278E273000930192 /* ConverterSelectionView.swift in Sources */,
+				1317892427921A240043A57D /* LengthConverterView.swift in Sources */,
+				1317892027921A0A0043A57D /* TimeConverterView.swift in Sources */,
+				1317892627921A390043A57D /* VolumeConverterView.swift in Sources */,
 				13199FBF278E260900930192 /* TimeConverter.swift in Sources */,
 				A66DDE88278BD5E600492EE8 /* TemperatureConverter.swift in Sources */,
 			);
