@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13199FBF278E260900930192 /* TimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13199FBE278E260900930192 /* TimeConverter.swift */; };
 		A623220A278BB33F00939398 /* WeConvertUnitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6232209278BB33F00939398 /* WeConvertUnitsApp.swift */; };
 		A623220C278BB33F00939398 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623220B278BB33F00939398 /* ContentView.swift */; };
 		A623220E278BB34000939398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A623220D278BB34000939398 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13199FBE278E260900930192 /* TimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConverter.swift; sourceTree = "<group>"; };
 		A6232206278BB33F00939398 /* WeConvertUnits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeConvertUnits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6232209278BB33F00939398 /* WeConvertUnitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeConvertUnitsApp.swift; sourceTree = "<group>"; };
 		A623220B278BB33F00939398 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				A66DDE84278BB44700492EE8 /* UnitConverter.swift */,
 				A66DDE87278BD5E600492EE8 /* TemperatureConverter.swift */,
+				13199FBE278E260900930192 /* TimeConverter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				A66DDE85278BB44700492EE8 /* UnitConverter.swift in Sources */,
 				A623220C278BB33F00939398 /* ContentView.swift in Sources */,
 				A623220A278BB33F00939398 /* WeConvertUnitsApp.swift in Sources */,
+				13199FBF278E260900930192 /* TimeConverter.swift in Sources */,
 				A66DDE88278BD5E600492EE8 /* TemperatureConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,36 +8,31 @@
 import Foundation
 
 struct TemperatueConverter: UnitConverter {
-    struct Unit: UnitProtocol {
-        let type: UnitType
-        let value: Double
+    func convert(_ input: Double, from originType: UnitType, to destinationType: UnitType) -> Double {
+        let baseValue = baseValue(from: input, unitType: originType)
         
-        init(fromBaseValue baseValue: Double, to unitType: UnitType) {
-            type = unitType
-            
-            switch unitType {
-            case .celsius:
-                value = baseValue - 273.15
-            case .fahrenheit:
-                value = (baseValue - 273.15) * 9/5 + 32
-            case .kelvin:
-                value = baseValue
-            }
-        }
-        
-        var baseValue: Double {
-            switch type {
-            case .celsius:
-                return value + 273.15
-            case .fahrenheit:
-                return (value - 32) * 5/9 + 273.15
-            case .kelvin:
-                return value
-            }
+        switch destinationType {
+        case .celsius:
+            return baseValue - 273.15
+        case .fahrenheit:
+            return (baseValue - 273.15) * 9/5 + 32
+        case .kelvin:
+            return baseValue
         }
     }
     
-    enum UnitType {
+    private func baseValue(from value: Double, unitType: UnitType) -> Double {
+        switch unitType {
+        case .celsius:
+            return value + 273.15
+        case .fahrenheit:
+            return (value - 32) * 5/9 + 273.15
+        case .kelvin:
+            return value
+        }
+    }
+    
+    enum UnitType: String, CaseIterable {
         case celsius
         case fahrenheit
         case kelvin

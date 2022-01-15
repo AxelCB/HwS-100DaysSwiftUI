@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ConversionType {
+enum ConversionType: String, CaseIterable {
     case temperature
     case length
     case time
@@ -15,24 +15,8 @@ enum ConversionType {
 }
 
 protocol UnitConverter {
-    associatedtype Unit: UnitProtocol
-    
-    func convert(_ input: Unit, to: Unit.UnitType) -> Unit
-}
-
-extension UnitConverter {
-    func convert(_ input: Unit, to destinationType: Unit.UnitType) -> Unit {
-        Unit(fromBaseValue: input.baseValue, to: destinationType)
-    }
-}
-
-protocol UnitProtocol {
-    associatedtype Value
+    associatedtype UnitValue
     associatedtype UnitType
-    
-    var value: Value { get }
-    var baseValue: Value { get }
-    var type: UnitType { get }
-    
-    init(fromBaseValue: Value, to destinationType: UnitType)
+
+    func convert(_ input: UnitValue, from originType: UnitType, to destinationType: UnitType) -> UnitValue
 }
