@@ -14,6 +14,7 @@
 		13199FBF278E260900930192 /* TimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13199FBE278E260900930192 /* TimeConverter.swift */; };
 		13199FC2278E273000930192 /* ConverterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13199FC1278E273000930192 /* ConverterSelectionView.swift */; };
 		137EA8FE2794504A008F7079 /* LengthConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EA8FD2794504A008F7079 /* LengthConverter.swift */; };
+		137EA901279453A2008F7079 /* VolumeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137EA900279453A2008F7079 /* VolumeConverter.swift */; };
 		A623220A278BB33F00939398 /* WeConvertUnitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6232209278BB33F00939398 /* WeConvertUnitsApp.swift */; };
 		A623220C278BB33F00939398 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A623220B278BB33F00939398 /* ContentView.swift */; };
 		A623220E278BB34000939398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A623220D278BB34000939398 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		13199FBE278E260900930192 /* TimeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeConverter.swift; sourceTree = "<group>"; };
 		13199FC1278E273000930192 /* ConverterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterSelectionView.swift; sourceTree = "<group>"; };
 		137EA8FD2794504A008F7079 /* LengthConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthConverter.swift; sourceTree = "<group>"; };
+		137EA900279453A2008F7079 /* VolumeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeConverter.swift; sourceTree = "<group>"; };
 		A6232206278BB33F00939398 /* WeConvertUnits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeConvertUnits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6232209278BB33F00939398 /* WeConvertUnitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeConvertUnitsApp.swift; sourceTree = "<group>"; };
 		A623220B278BB33F00939398 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				A66DDE87278BD5E600492EE8 /* TemperatureConverter.swift */,
 				13199FBE278E260900930192 /* TimeConverter.swift */,
 				137EA8FD2794504A008F7079 /* LengthConverter.swift */,
+				137EA900279453A2008F7079 /* VolumeConverter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				A623220C278BB33F00939398 /* ContentView.swift in Sources */,
 				1317892227921A150043A57D /* TemperatureConverterView.swift in Sources */,
 				A623220A278BB33F00939398 /* WeConvertUnitsApp.swift in Sources */,
+				137EA901279453A2008F7079 /* VolumeConverter.swift in Sources */,
 				13199FC2278E273000930192 /* ConverterSelectionView.swift in Sources */,
 				137EA8FE2794504A008F7079 /* LengthConverter.swift in Sources */,
 				1317892427921A240043A57D /* LengthConverterView.swift in Sources */,
