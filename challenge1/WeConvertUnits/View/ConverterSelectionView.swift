@@ -36,7 +36,7 @@ struct ConverterSelectionView: View {
     }
 }
 
-struct ConverterView_Previews: PreviewProvider {
+struct ConverterSelectionView_Previews: PreviewProvider {
     static var previews: some View {
         ConverterSelectionView()
     }
