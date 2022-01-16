@@ -35,7 +35,7 @@ struct VolumeConverterView: View {
             }
             .pickerStyle(.segmented)
             
-            Text("\(outputValue)")
+            Text(outputValue.formatted())
         }
     }
     

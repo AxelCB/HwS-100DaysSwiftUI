@@ -35,7 +35,7 @@ struct LengthConverterView: View {
             }
             .pickerStyle(.segmented)
             
-            Text("\(outputValue)")
+            Text(outputValue.formatted())
         }
     }
     

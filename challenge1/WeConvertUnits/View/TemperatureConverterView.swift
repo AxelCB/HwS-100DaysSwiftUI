@@ -35,7 +35,7 @@ struct TemperatureConverterView: View {
             }
             .pickerStyle(.segmented)
             
-            Text("\(outputValue)")
+            Text(outputValue.formatted())
         }
     }
     
