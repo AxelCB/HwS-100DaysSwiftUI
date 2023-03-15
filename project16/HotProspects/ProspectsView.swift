@@ -41,11 +41,24 @@ struct ProspectsView: View {
         NavigationView {
             List {
                 ForEach(filteredProspects) { prospect in
-                    VStack(alignment: .leading) {
-                        Text(prospect.name)
-                            .font(.headline)
-                        Text(prospect.emailAddress)
-                            .foregroundColor(.secondary)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(prospect.name)
+                                .font(.headline)
+                            Text(prospect.emailAddress)
+                                .foregroundColor(.secondary)
+                        }
+                        if filter == .none {
+                            Spacer()
+                            if prospect.isContacted {
+                                Image(systemName: "person.fill.checkmark")
+                                    .foregroundColor(.green)
+                            } else {
+                                Image(systemName: "person.fill")
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+
                     }
                     .swipeActions {
                         if prospect.isContacted {
