@@ -63,3 +63,81 @@ struct Arrow: InsettableShape {
         return arrow
     }
 }
+
+struct ColorCyclingRectangle: View {
+    var amount = 0.0
+    var steps = 100
+    var gradientStartPoint: (Double, Double) = (0.0, 0.0)
+    var gradientEndPoint: (Double, Double) = (0.0, 0.0)
+
+    var body: some View {
+        ZStack {
+            ForEach(0..<steps) { value in
+                Rectangle()
+                    .inset(by: Double(value))
+                    .strokeBorder(
+                        LinearGradient(
+                            gradient: Gradient(colors: [
+                                color(for: value, brightness: 1),
+                                color(for: value, brightness: 0.5)
+                            ]),
+                            startPoint: UnitPoint(x: gradientStartPoint.0, y: gradientStartPoint.1),
+                            endPoint: UnitPoint(x: gradientEndPoint.0, y: gradientEndPoint.1)
+                        ),
+                        lineWidth: 2
+                    )
+            }
+        }
+        .drawingGroup()
+    }
+
+    func color(for value: Int, brightness: Double) -> Color {
+        var targetHue = Double(value) / Double(steps) + amount
+
+        if targetHue > 1 {
+            targetHue -= 1
+        }
+
+        return Color(hue: targetHue, saturation: 1, brightness: brightness)
+    }
+}
+
+struct ColorCyclingRectangleContentView: View {
+    @State private var colorCycle = 0.0
+    @State private var gradientStartX = 0.0
+    @State private var gradientStartY = 0.0
+    @State private var gradientEndX = 0.0
+    @State private var gradientEndY = 0.0
+
+    var body: some View {
+        VStack {
+            ColorCyclingRectangle(amount: colorCycle,
+                                  gradientStartPoint: (gradientStartX, gradientStartY),
+                                  gradientEndPoint: (gradientEndX, gradientEndY)
+                )
+                .frame(width: 300, height: 300)
+
+            HStack {
+                Text("Color: ")
+                Slider(value: $colorCycle)
+            }
+            HStack {
+                Text("Gradient Start X: ")
+                Slider(value: $gradientStartX)
+            }
+            HStack {
+                Text("Gradient Start Y: ")
+                Slider(value: $gradientStartY)
+            }
+            HStack {
+                Text("Gradient End X: ")
+                Slider(value: $gradientEndX)
+            }
+            HStack {
+                Text("Gradient End Y: ")
+                Slider(value: $gradientEndY)
+            }
+
+        }
+    }
+}
