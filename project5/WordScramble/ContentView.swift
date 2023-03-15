@@ -33,6 +33,9 @@ struct ContentView: View {
                     }
                 }
             }
+            .toolbar {
+                Button("New Game", action: startGame)
+            }
             .navigationTitle(rootWord)
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
