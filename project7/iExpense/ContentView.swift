@@ -14,22 +14,47 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
+                Section(header: Text("Business")) {
+                    ForEach(expenses.businessItems) { item in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(item.name)
+                                    .font(.headline)
+                                Text(item.type)
+                            }
+
+                            Spacer()
+
+                            Text(item.amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                                .foregroundColor(item.amount > 100 ? .red : .black)
+                                .font(.system(size: item.amount < 10 ? 14 : 16))
                         }
+                    }
+                    .onDelete(perform: removeItems)
+                }
+                Section(header: Text("Personal")) {
+                    ForEach(expenses.personalItems) { item in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(item.name)
+                                    .font(.headline)
+                                Text(item.type)
+                            }
 
-                        Spacer()
+                            Spacer()
 
-                        Text(item.amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                            .foregroundColor(item.amount > 100 ? .red : .black)
-                            .font(.system(size: item.amount < 10 ? 14 : 16))
+                            Text(item.amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                                .foregroundColor(item.amount > 100 ? .red : .black)
+                                .font(.system(size: item.amount < 10 ? 14 : 16))
+                        }
+                    }
+                    .onDelete { indexSet in
+                        var updatedIndexSet = indexSet
+                        updatedIndexSet.shift(startingAt: updatedIndexSet.first ?? 0, by: expenses.businessItems.count)
+                        removeItems(at: updatedIndexSet)
                     }
                 }
-                .onDelete(perform: removeItems)
+
             }
             .toolbar {
                 Button {
