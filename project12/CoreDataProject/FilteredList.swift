@@ -20,16 +20,27 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
         }
     }
 
-    init(filterKey: String, filterPredicate: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
-        _fetchRequest = FetchRequest<T>(sortDescriptors: [], predicate: NSPredicate(format: "%K \(filterPredicate.uppercased()) %@", filterKey, filterValue))
+    init(filterKey: String, filterPredicate: FilterPredicate, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
+        _fetchRequest = FetchRequest<T>(sortDescriptors: [], predicate: NSPredicate(format: "%K \(filterPredicate) %@", filterKey, filterValue))
         self.content = content
     }
 }
 
 struct FilteredList_Previews: PreviewProvider {
     static var previews: some View {
-        FilteredList(filterKey: "lastName", filterPredicate: "BEGINSWITH", filterValue: "Swift") { (singer: Singer) in
+        FilteredList(filterKey: "lastName", filterPredicate: .beginsWith, filterValue: "Swift") { (singer: Singer) in
             Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
         }
+    }
+}
+
+enum FilterPredicate: String, CustomStringConvertible {
+    case beginsWith = "BEGINSWITH"
+    case endsWith = "ENDSWITH"
+    case equal = "=="
+    case contains = "contains"
+
+    var description: String {
+        rawValue
     }
 }
