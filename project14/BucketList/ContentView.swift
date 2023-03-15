@@ -14,30 +14,8 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
-                .onTapGesture(perform: loadFile)
-            MapSample()
         }
         .padding()
-    }
-
-    func loadFile() {
-        let str = "Test Message"
-
-        do {
-            try FileManager.default.writeJSON(str, toFile: "message.txt")
-            let input: String = try FileManager.default.readJSON(fromFile: "message.txt")
-            print(input)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-
-    func getDocumentsDirectory() -> URL {
-        // find all possible documents directories for this user
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-
-        // just send back the first one, which ought to be the only one
-        return paths[0]
     }
 }
 
