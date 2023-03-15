@@ -11,6 +11,7 @@
 		B3D28ABE2874D31B008A7666 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D28ABD2874D31B008A7666 /* ContentView.swift */; };
 		B3D28AC02874D31D008A7666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D28ABF2874D31D008A7666 /* Assets.xcassets */; };
 		B3D28AC32874D31D008A7666 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D28AC22874D31D008A7666 /* Preview Assets.xcassets */; };
+		B3EB7C7F28983A9F00037A8D /* LargeBlueTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EB7C7E28983A9F00037A8D /* LargeBlueTitleModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B3D28ABD2874D31B008A7666 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3D28ABF2874D31D008A7666 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D28AC22874D31D008A7666 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3EB7C7E28983A9F00037A8D /* LargeBlueTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeBlueTitleModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				B3D28ABD2874D31B008A7666 /* ContentView.swift */,
 				B3D28ABF2874D31D008A7666 /* Assets.xcassets */,
 				B3D28AC12874D31D008A7666 /* Preview Content */,
+				B3EB7C7E28983A9F00037A8D /* LargeBlueTitleModifier.swift */,
 			);
 			path = ViewsAndModifiers;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3EB7C7F28983A9F00037A8D /* LargeBlueTitleModifier.swift in Sources */,
 				B3D28ABE2874D31B008A7666 /* ContentView.swift in Sources */,
 				B3D28ABC2874D31B008A7666 /* ViewsAndModifiersApp.swift in Sources */,
 			);
