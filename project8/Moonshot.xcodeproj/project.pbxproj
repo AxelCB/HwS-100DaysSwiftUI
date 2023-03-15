@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B360A04628CD1E300041DC75 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B360A04528CD1E300041DC75 /* DividerView.swift */; };
+		B360A04828CD1E8F0041DC75 /* CrewCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B360A04728CD1E8F0041DC75 /* CrewCarouselView.swift */; };
 		B383793628C3854B0094CBEF /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = B383793328C385490094CBEF /* astronauts.json */; };
 		B383793728C3854B0094CBEF /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = B383793428C385490094CBEF /* missions.json */; };
 		B383793A28C385F80094CBEF /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = B383793928C385F80094CBEF /* Astronaut.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B360A04528CD1E300041DC75 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		B360A04728CD1E8F0041DC75 /* CrewCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewCarouselView.swift; sourceTree = "<group>"; };
 		B383793328C385490094CBEF /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 		B383793428C385490094CBEF /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		B383793928C385F80094CBEF /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 				B383793F28C4C1440094CBEF /* Color-Theme.swift */,
 				B383794128C4C71E0094CBEF /* MissionView.swift */,
 				B383794328C5191E0094CBEF /* AstronautView.swift */,
+				B360A04528CD1E300041DC75 /* DividerView.swift */,
+				B360A04728CD1E8F0041DC75 /* CrewCarouselView.swift */,
 			);
 			path = Moonshot;
 			sourceTree = "<group>";
@@ -164,7 +170,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B383794228C4C71E0094CBEF /* MissionView.swift in Sources */,
+				B360A04628CD1E300041DC75 /* DividerView.swift in Sources */,
 				B383793A28C385F80094CBEF /* Astronaut.swift in Sources */,
+				B360A04828CD1E8F0041DC75 /* CrewCarouselView.swift in Sources */,
 				B383794428C5191E0094CBEF /* AstronautView.swift in Sources */,
 				B383794028C4C1440094CBEF /* Color-Theme.swift in Sources */,
 				B3BFC69E28BD290500195835 /* ContentView.swift in Sources */,
