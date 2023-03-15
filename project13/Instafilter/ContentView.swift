@@ -33,7 +33,8 @@ struct ContentView: View {
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
-        UIImageWriteToSavedPhotosAlbum(inputImage, nil, nil, nil)
+        let imageSaver = ImageSaver()
+        imageSaver.writeToPhotoAlbum(image: inputImage)
     }
 }
 
