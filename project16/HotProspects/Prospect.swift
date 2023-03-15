@@ -16,18 +16,15 @@ class Prospect: Identifiable, Codable {
 
 @MainActor class Prospects: ObservableObject {
     @Published private(set) var people: [Prospect]
-    let saveKey = "SavedData"
+    let prospectsFileName = "Prospects.json"
 
     init() {
-        if let data = UserDefaults.standard.data(forKey: saveKey
-        ) {
-            if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
-                people = decoded
-                return
-            }
+        do {
+            people = try FileManager.default.readJSON(fromFile: prospectsFileName)
+        } catch {
+            print("Could not read people list from json file")
+            people = []
         }
-
-        people = []
     }
 
     func add(_ prospect: Prospect) {
@@ -36,8 +33,10 @@ class Prospect: Identifiable, Codable {
     }
 
     private func save() {
-        if let encoded = try? JSONEncoder().encode(people) {
-            UserDefaults.standard.set(encoded, forKey: saveKey)
+        do {
+            try FileManager.default.writeJSON(people, toFile: prospectsFileName)
+        } catch {
+            print("Could not save people list")
         }
     }
 

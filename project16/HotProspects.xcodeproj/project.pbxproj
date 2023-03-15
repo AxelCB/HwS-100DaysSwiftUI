@@ -16,6 +16,7 @@
 		B328AE2529B1610B001F19E9 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B328AE2429B1610B001F19E9 /* Prospect.swift */; };
 		B3D9E8D229B295ED00CE65B8 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = B3D9E8D129B295ED00CE65B8 /* CodeScanner */; };
 		B3D9E8D529B5244600CE65B8 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9E8D429B5244600CE65B8 /* ImageSaver.swift */; };
+		B3D9E8D929B5466E00CE65B8 /* FileManager+DocumentsDirectoryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9E8D829B5466E00CE65B8 /* FileManager+DocumentsDirectoryUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B328AE2429B1610B001F19E9 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		B3D9E8D329B416D200CE65B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B3D9E8D429B5244600CE65B8 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		B3D9E8D829B5466E00CE65B8 /* FileManager+DocumentsDirectoryUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+DocumentsDirectoryUtils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				B3D9E8D329B416D200CE65B8 /* Info.plist */,
 				B305C61529AFCF05002D4374 /* HotProspectsApp.swift */,
 				B305C61729AFCF05002D4374 /* ContentView.swift */,
+				B3D9E8D829B5466E00CE65B8 /* FileManager+DocumentsDirectoryUtils.swift */,
 				B305C61929AFCF06002D4374 /* Assets.xcassets */,
 				B305C61B29AFCF06002D4374 /* Preview Content */,
 				B328AE2029B14BEF001F19E9 /* ProspectsView.swift */,
@@ -164,6 +167,7 @@
 				B328AE2529B1610B001F19E9 /* Prospect.swift in Sources */,
 				B328AE2129B14BEF001F19E9 /* ProspectsView.swift in Sources */,
 				B305C61829AFCF05002D4374 /* ContentView.swift in Sources */,
+				B3D9E8D929B5466E00CE65B8 /* FileManager+DocumentsDirectoryUtils.swift in Sources */,
 				B305C61629AFCF05002D4374 /* HotProspectsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
