@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B367A40529A6CEEE007F7698 /* EditView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B367A40429A6CEEE007F7698 /* EditView+ViewModel.swift */; };
 		B39B3E9329A19B34003137C0 /* FileManager+DocumentsDirectoryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3E9229A19B34003137C0 /* FileManager+DocumentsDirectoryUtils.swift */; };
 		B39B3E9729A23FF4003137C0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3E9629A23FF4003137C0 /* Location.swift */; };
 		B39B3E9B29A3F096003137C0 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B3E9A29A3F096003137C0 /* EditView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B367A40429A6CEEE007F7698 /* EditView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "EditView+ViewModel.swift"; path = "BucketList/EditView+ViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		B39B3E9229A19B34003137C0 /* FileManager+DocumentsDirectoryUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+DocumentsDirectoryUtils.swift"; sourceTree = "<group>"; };
 		B39B3E9629A23FF4003137C0 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		B39B3E9A29A3F096003137C0 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				B39B3E9E29A42D33003137C0 /* ContentView-ViewModel.swift */,
+				B367A40429A6CEEE007F7698 /* EditView+ViewModel.swift */,
 				B39B3E9C29A3FBDD003137C0 /* Result.swift */,
 				B3A16E5129A163FC0033D2C6 /* BucketListApp.swift */,
 				B3A16E5329A163FC0033D2C6 /* ContentView.swift */,
@@ -155,6 +158,7 @@
 				B39B3E9D29A3FBDD003137C0 /* Result.swift in Sources */,
 				B3A16E5429A163FC0033D2C6 /* ContentView.swift in Sources */,
 				B39B3E9B29A3F096003137C0 /* EditView.swift in Sources */,
+				B367A40529A6CEEE007F7698 /* EditView+ViewModel.swift in Sources */,
 				B39B3E9329A19B34003137C0 /* FileManager+DocumentsDirectoryUtils.swift in Sources */,
 				B39B3E9729A23FF4003137C0 /* Location.swift in Sources */,
 				B39B3E9F29A42D33003137C0 /* ContentView-ViewModel.swift in Sources */,
