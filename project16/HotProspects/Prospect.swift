@@ -11,6 +11,7 @@ class Prospect: Identifiable, Codable {
     var id = UUID()
     var name = "Anonymous"
     var emailAddress = ""
+    var createdAt = Date.now
     fileprivate(set) var isContacted = false
 }
 
@@ -44,5 +45,16 @@ class Prospect: Identifiable, Codable {
         objectWillChange.send()
         prospect.isContacted.toggle()
         save()
+    }
+
+    func sort<T: Comparable>(by field: KeyPath<Prospect, T>, ascending: Bool = true) {
+        objectWillChange.send()
+        people.sort { lhs, rhs in
+            if ascending {
+                return lhs[keyPath: field] <= rhs[keyPath: field]
+            } else {
+                return lhs[keyPath: field] > rhs[keyPath: field]
+            }
+        }
     }
 }

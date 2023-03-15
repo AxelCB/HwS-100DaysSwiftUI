@@ -14,6 +14,7 @@ struct ProspectsView: View {
 
     @EnvironmentObject var prospects: Prospects
     @State private var isShowingScanner = false
+    @State private var isShowingSortingConfirmationDialog = false
 
     var title: String {
         switch filter {
@@ -88,6 +89,11 @@ struct ProspectsView: View {
             .navigationTitle(title)
             .toolbar {
                 Button {
+                    isShowingSortingConfirmationDialog = true
+                } label: {
+                    Label("Sort", systemImage: "arrow.up.and.down")
+                }
+                Button {
                     isShowingScanner = true
                 } label: {
                     Label("Scan", systemImage: "qrcode.viewfinder")
@@ -95,6 +101,14 @@ struct ProspectsView: View {
             }
             .sheet(isPresented: $isShowingScanner) {
                 CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: handleScan)
+            }
+            .confirmationDialog("Sort by", isPresented: $isShowingSortingConfirmationDialog) {
+                Button("Name") {
+                    prospects.sort(by: \.name)
+                }
+                Button("Most Recent") {
+                    prospects.sort(by: \.createdAt, ascending: false)
+                }
             }
         }
     }
