@@ -37,14 +37,17 @@ struct MissionView: View {
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.top)
-
                     VStack(alignment: .leading) {
                         Rectangle()
                             .frame(height: 2)
                             .foregroundColor(.lightBackground)
                             .padding(.vertical)
+                        
                         Text("Mission Highlights")
                             .font(.title.bold())
+                            .padding(.bottom, 5)
+                        Text(mission.formattedLaunchDate)
+                            .font(.title2)
                             .padding(.bottom, 5)
 
                         Text(mission.description)
@@ -101,7 +104,7 @@ struct MissionView_Previews: PreviewProvider {
     static let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
 
     static var previews: some View {
-        MissionView(mission: missions[0], astronauts: astronauts)
+        MissionView(mission: missions[1], astronauts: astronauts)
             .preferredColorScheme(.dark)
     }
 }
