@@ -10,10 +10,19 @@ import MapKit
 
 extension ContentView {
     @MainActor class ViewModel: ObservableObject {
+        let savePath = "SavedPlaces"
         @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 0),
                                                         span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
-        @Published private(set) var locations = [Location]()
+        @Published private(set) var locations: [Location]
         @Published var selectedPlace: Location?
+
+        init() {
+            do {
+                locations = try FileManager.default.readJSON(fromFile: savePath)
+            } catch {
+                locations = []
+            }
+        }
 
         func addLocation() {
             let newLocation = Location(id: UUID(),
@@ -22,6 +31,7 @@ extension ContentView {
                                        latitude: mapRegion.center.latitude,
                                        longitude: mapRegion.center.longitude)
             locations.append(newLocation)
+            save()
         }
 
         func update(location: Location) {
@@ -29,6 +39,15 @@ extension ContentView {
 
             if let index = locations.firstIndex(of: selectedPlace) {
                 locations[index] = location
+                save()
+            }
+        }
+
+        func save() {
+            do {
+                try FileManager.default.writeJSON(locations, toFile: savePath)
+            } catch {
+                print("Unable to save data")
             }
         }
     }
