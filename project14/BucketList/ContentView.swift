@@ -21,11 +21,10 @@ struct ContentView: View {
 
     func loadFile() {
         let str = "Test Message"
-        let url = getDocumentsDirectory().appendingPathComponent("message.txt")
 
         do {
-            try str.write(to: url, atomically: true, encoding: .utf8)
-            let input = try String(contentsOf: url)
+            try FileManager.default.writeJSON(str, toFile: "message.txt")
+            let input: String = try FileManager.default.readJSON(fromFile: "message.txt")
             print(input)
         } catch {
             print(error.localizedDescription)
