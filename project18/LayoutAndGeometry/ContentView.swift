@@ -34,6 +34,7 @@ struct CoverFlowContentView: View {
 
 struct ScrollEffectsContentView: View {
     let colors: [Color] = [.red, .green, .blue, .orange, .pink, .purple, .yellow]
+    let fadingStartY = 200
 
     var body: some View {
         GeometryReader { fullView in
@@ -45,11 +46,19 @@ struct ScrollEffectsContentView: View {
                             .frame(width: fullView.size.width)
                             .background(self.colors[index % 7])
                             .rotation3DEffect(.degrees(Double(geo.frame(in: .global).minY - fullView.size.height / 2) / 5), axis: (x: 0, y: 1, z: 0))
+                            .opacity(geo.frame(in: .global).minY > 200 ? opacityFor(frame: geo.frame(in: .global), fullHeight: fullView.frame(in: .global).maxY) : 1)
                     }
                     .frame(height: 40)
                 }
             }
         }
+    }
+
+    func opacityFor(frame: CGRect, fullHeight: CGFloat) -> Double {
+        let yCoordinate = Double(frame.minY)
+        let height = Double(fullHeight)
+        let opacity = 1 - (yCoordinate/height)
+        return abs(opacity)
     }
 }
 
@@ -148,7 +157,7 @@ struct SimpleAlignmentContentView: View {
     }
 }
 
-struct ContentView: View {
+struct BaselineAlignmentContentView: View {
     var body: some View {
         HStack(alignment: .lastTextBaseline) {
             Text("Live")
@@ -159,11 +168,5 @@ struct ContentView: View {
             Text("prosper")
                 .font(.largeTitle)
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
