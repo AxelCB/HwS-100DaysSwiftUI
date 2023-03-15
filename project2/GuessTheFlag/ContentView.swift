@@ -46,6 +46,7 @@ struct ContentView: View {
                         } label: {
                             FlagImage(flagName: countries[number])
                                 .opacity(flagsOpacityAnimationAmount[number])
+                                .scaleEffect(flagsOpacityAnimationAmount[number])
                                 .rotation3DEffect(.degrees(flagsRotationAnimationAmount[number]), axis: (x: 0, y: 1, z: 0))
                         }
                     }
@@ -78,6 +79,7 @@ struct ContentView: View {
     func flagTapped(_ number: Int) {
         withAnimation(.easeInOut) {
             flagsRotationAnimationAmount[number] += 360
+            flagsOpacityAnimationAmount[number] = 1.25
             (0..<3).filter({$0 != number}).forEach { otherFlag in
                 flagsOpacityAnimationAmount[otherFlag] = 0.25
             }
