@@ -66,7 +66,7 @@ struct ContentView: View {
             return
         }
 
-        guard answer.count < 3 else {
+        guard answer.count >= 3 else {
             wordError(title: "Word too short", message: "Try to think of longer words")
             return
         }
