@@ -11,6 +11,7 @@
 		B308884A298EE4B300044CE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3088849298EE4B300044CE7 /* ContentView.swift */; };
 		B308884C298EE4B500044CE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B308884B298EE4B500044CE7 /* Assets.xcassets */; };
 		B308884F298EE4B500044CE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B308884E298EE4B500044CE7 /* Preview Assets.xcassets */; };
+		B3F17EBD298F03E200DE9A90 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F17EBC298F03E200DE9A90 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		B308884B298EE4B500044CE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B308884E298EE4B500044CE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3088850298EE4B500044CE7 /* Bookworm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bookworm.entitlements; sourceTree = "<group>"; };
+		B3F17EBC298F03E200DE9A90 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		B3088846298EE4B300044CE7 /* Bookworm */ = {
 			isa = PBXGroup;
 			children = (
+				B3F17EBC298F03E200DE9A90 /* DataController.swift */,
 				B3088847298EE4B300044CE7 /* BookwormApp.swift */,
 				B3088849298EE4B300044CE7 /* ContentView.swift */,
 				B308884B298EE4B500044CE7 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B308884A298EE4B300044CE7 /* ContentView.swift in Sources */,
+				B3F17EBD298F03E200DE9A90 /* DataController.swift in Sources */,
 				B3088848298EE4B300044CE7 /* BookwormApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
