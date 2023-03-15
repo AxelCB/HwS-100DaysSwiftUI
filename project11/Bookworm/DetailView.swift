@@ -38,6 +38,11 @@ struct DetailView: View {
             Text(book.review ?? "No review")
                 .padding()
 
+            HStack {
+                Text("Added on the: \(book.date?.formatted() ?? "Information not available")")
+                    .padding()
+            }
+
             RatingView(rating: .constant(Int(book.rating)))
                 .font(.largeTitle)
         }
