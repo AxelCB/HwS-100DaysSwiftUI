@@ -14,6 +14,7 @@
 		B393920328DCED9A00341A9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393920228DCED9A00341A9B /* ContentView.swift */; };
 		B393920528DCED9B00341A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B393920428DCED9B00341A9B /* Assets.xcassets */; };
 		B393920828DCED9B00341A9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B393920728DCED9B00341A9B /* Preview Assets.xcassets */; };
+		B3CFE54428F08B4C00693406 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFE54328F08B4C00693406 /* OrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B393920228DCED9A00341A9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B393920428DCED9B00341A9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B393920728DCED9B00341A9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3CFE54328F08B4C00693406 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				B31299CF28DF56A200847FAE /* Order.swift */,
 				B31299D128DFBD7F00847FAE /* AddressView.swift */,
 				B31299D328DFBF7D00847FAE /* CheckoutView.swift */,
+				B3CFE54328F08B4C00693406 /* OrderViewModel.swift */,
 			);
 			path = CupcakeCorner;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				B393920328DCED9A00341A9B /* ContentView.swift in Sources */,
 				B31299D228DFBD7F00847FAE /* AddressView.swift in Sources */,
 				B31299D428DFBF7D00847FAE /* CheckoutView.swift in Sources */,
+				B3CFE54428F08B4C00693406 /* OrderViewModel.swift in Sources */,
 				B393920128DCED9A00341A9B /* CupcakeCornerApp.swift in Sources */,
 				B31299D028DF56A200847FAE /* Order.swift in Sources */,
 			);
