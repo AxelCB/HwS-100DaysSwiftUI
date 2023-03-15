@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     @State var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State var correctAnswer = Int.random(in: 0...2)
     @State private var showingScore = false
@@ -17,7 +17,8 @@ struct ContentView: View {
     @State private var rounds = 8
     @State private var showingResults = false
     @State private var flagsRotationAnimationAmount = [0.0, 0.0, 0.0]
-    
+    @State private var flagsOpacityAnimationAmount = [1.0, 1.0, 1.0]
+
     var body: some View {
         ZStack {
             RadialGradient(stops: [
@@ -38,12 +39,13 @@ struct ContentView: View {
                         Text(countries[correctAnswer])
                             .font(.largeTitle.weight(.semibold))
                     }
-                        
+
                     ForEach(0..<3) { number in
                         Button {
                             flagTapped(number)
                         } label: {
                             FlagImage(flagName: countries[number])
+                                .opacity(flagsOpacityAnimationAmount[number])
                                 .rotation3DEffect(.degrees(flagsRotationAnimationAmount[number]), axis: (x: 0, y: 1, z: 0))
                         }
                     }
@@ -72,10 +74,13 @@ struct ContentView: View {
             Text("Your score after 8 rounds was \(score)")
         }
     }
-    
+
     func flagTapped(_ number: Int) {
         withAnimation(.easeInOut) {
             flagsRotationAnimationAmount[number] += 360
+            (0..<3).filter({$0 != number}).forEach { otherFlag in
+                flagsOpacityAnimationAmount[otherFlag] = 0.25
+            }
         }
         if number == correctAnswer {
             scoreTitle = "Correct"
@@ -87,17 +92,20 @@ struct ContentView: View {
         rounds -= 1
         showingScore = true
     }
-    
+
     func askQuestion() {
+        for flagIndex in 0..<3 {
+            flagsOpacityAnimationAmount[flagIndex] = 1.0
+        }
         if rounds > 0 {
             countries.shuffle()
             correctAnswer = Int.random(in: 0...2)
         } else {
             showingResults = true
         }
-        
+
     }
-    
+
     func restart() {
         score = 0
         rounds = 8
