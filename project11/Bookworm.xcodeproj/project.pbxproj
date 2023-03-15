@@ -16,6 +16,7 @@
 		B3F17EC2298F116700DE9A90 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F17EC1298F116700DE9A90 /* AddBookView.swift */; };
 		B3F17EC4298F337900DE9A90 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F17EC3298F337900DE9A90 /* RatingView.swift */; };
 		B3F17EC729900BEB00DE9A90 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F17EC629900BEB00DE9A90 /* EmojiRatingView.swift */; };
+		B3F17EC929903F4D00DE9A90 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F17EC829903F4D00DE9A90 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B3F17EC3298F337900DE9A90 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		B3F17EC5298F37E300DE9A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B3F17EC629900BEB00DE9A90 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		B3F17EC829903F4D00DE9A90 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				B3F17EC1298F116700DE9A90 /* AddBookView.swift */,
 				B3F17EC3298F337900DE9A90 /* RatingView.swift */,
 				B3F17EC629900BEB00DE9A90 /* EmojiRatingView.swift */,
+				B3F17EC829903F4D00DE9A90 /* DetailView.swift */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B308884A298EE4B300044CE7 /* ContentView.swift in Sources */,
+				B3F17EC929903F4D00DE9A90 /* DetailView.swift in Sources */,
 				B3F17EC0298F05DD00DE9A90 /* Bookworm.xcdatamodeld in Sources */,
 				B3F17EC729900BEB00DE9A90 /* EmojiRatingView.swift in Sources */,
 				B3F17EBD298F03E200DE9A90 /* DataController.swift in Sources */,
