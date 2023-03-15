@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    @State private var playerScore = 0.0
 
     @State private var errorTitle = ""
     @State private var errorMessage = ""
@@ -19,6 +20,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
+                Section {
+                    HStack {
+                        Text("Your current score is: ")
+                        Text("\(Int(playerScore))")
+                            .bold()
+                    }
+
+                }
+
                 Section {
                     TextField("Enter your word", text: $newWord)
                         .textInputAutocapitalization(.never)
@@ -81,6 +91,7 @@ struct ContentView: View {
 
         withAnimation {
             usedWords.insert(answer, at: 0)
+            playerScore = playerScore + pow(Double(answer.count), 2)
         }
         newWord = ""
     }
@@ -97,6 +108,7 @@ struct ContentView: View {
                 rootWord = allWords.randomElement() ?? "silkworm"
 
                 // If we are here everything has worked, so we can exit
+                playerScore = 0
                 return
             }
         }
