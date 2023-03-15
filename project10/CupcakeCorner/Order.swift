@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class Order: ObservableObject {
-    enum Flavour: String, CaseIterable {
+final class Order: ObservableObject, Codable {
+    enum Flavour: String, CaseIterable, Codable {
         case vanilla
         case strawberry
         case chocolate
@@ -47,6 +47,10 @@ final class Order: ObservableObject {
     @Published var city = ""
     @Published var zip = ""
 
+    enum CodingKeys: CodingKey {
+        case flavour, quantity, addExtraFrosting, addExtraSprinkles, name, streetAddress, city, zip
+    }
+
     var hasValidAddress: Bool {
         if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
             return false
@@ -73,5 +77,37 @@ final class Order: ObservableObject {
         }
 
         return cost
+    }
+
+    init() { }
+
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        flavour = try container.decode(Flavour.self, forKey: .flavour)
+        quantity = try container.decode(Int.self, forKey: .quantity)
+
+        addExtraFrosting = try container.decode(Bool.self, forKey: .addExtraFrosting)
+        addExtraSprinkles = try container.decode(Bool.self, forKey: .addExtraSprinkles)
+
+        name = try container.decode(String.self, forKey: .name)
+        streetAddress = try container.decode(String.self, forKey: .streetAddress)
+        city = try container.decode(String.self, forKey: .city)
+        zip = try container.decode(String.self, forKey: .zip)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        try container.encode(flavour, forKey: .flavour)
+        try container.encode(quantity, forKey: .quantity)
+
+        try container.encode(addExtraFrosting, forKey: .addExtraFrosting)
+        try container.encode(addExtraSprinkles, forKey: .addExtraSprinkles)
+
+        try container.encode(name, forKey: .name)
+        try container.encode(streetAddress, forKey: .streetAddress)
+        try container.encode(city, forKey: .city)
+        try container.encode(zip, forKey: .zip)
     }
 }
