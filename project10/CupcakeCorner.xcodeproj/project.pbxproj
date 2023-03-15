@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B31299D028DF56A200847FAE /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31299CF28DF56A200847FAE /* Order.swift */; };
 		B31299D228DFBD7F00847FAE /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31299D128DFBD7F00847FAE /* AddressView.swift */; };
+		B31299D428DFBF7D00847FAE /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31299D328DFBF7D00847FAE /* CheckoutView.swift */; };
 		B393920128DCED9A00341A9B /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393920028DCED9A00341A9B /* CupcakeCornerApp.swift */; };
 		B393920328DCED9A00341A9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393920228DCED9A00341A9B /* ContentView.swift */; };
 		B393920528DCED9B00341A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B393920428DCED9B00341A9B /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		B31299CF28DF56A200847FAE /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		B31299D128DFBD7F00847FAE /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		B31299D328DFBF7D00847FAE /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		B39391FD28DCED9A00341A9B /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B393920028DCED9A00341A9B /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
 		B393920228DCED9A00341A9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				B393920628DCED9B00341A9B /* Preview Content */,
 				B31299CF28DF56A200847FAE /* Order.swift */,
 				B31299D128DFBD7F00847FAE /* AddressView.swift */,
+				B31299D328DFBF7D00847FAE /* CheckoutView.swift */,
 			);
 			path = CupcakeCorner;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				B393920328DCED9A00341A9B /* ContentView.swift in Sources */,
 				B31299D228DFBD7F00847FAE /* AddressView.swift in Sources */,
+				B31299D428DFBF7D00847FAE /* CheckoutView.swift in Sources */,
 				B393920128DCED9A00341A9B /* CupcakeCornerApp.swift in Sources */,
 				B31299D028DF56A200847FAE /* Order.swift in Sources */,
 			);

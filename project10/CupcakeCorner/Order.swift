@@ -28,4 +28,17 @@ final class Order: ObservableObject {
     }
     @Published var addExtraFrosting = false
     @Published var addExtraSprinkles = false
+
+    @Published var name = ""
+    @Published var streetAddress = ""
+    @Published var city = ""
+    @Published var zip = ""
+
+    var hasValidAddress: Bool {
+        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+            return false
+        }
+
+        return true
+    }
 }
