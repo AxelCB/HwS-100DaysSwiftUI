@@ -8,17 +8,35 @@
 import SwiftUI
 
 struct ChallengeContentView: View {
-    var body: some View {
-        Arrow()
-            .strokeBorder(lineWidth: 10)
-            .frame(width: 200, height: 300)
+    @State var arrowLineWidth = 1.0
 
+    var body: some View {
+        AnimatableArrow(lineWidth: arrowLineWidth)
+            .frame(width: 200, height: 600)
+            .onTapGesture {
+                withAnimation(.easeInOut(duration: 6)) {
+                    arrowLineWidth += 15
+                }
+            }
     }
 }
 
 struct ChallengeContentView_Previews: PreviewProvider {
     static var previews: some View {
         ChallengeContentView()
+    }
+}
+
+struct AnimatableArrow: View, Animatable {
+    var lineWidth: Double
+    var animatableData: Double {
+        get { lineWidth }
+        set { lineWidth = newValue }
+    }
+
+    var body: some View {
+        Arrow()
+            .strokeBorder(lineWidth: lineWidth)
     }
 }
 
