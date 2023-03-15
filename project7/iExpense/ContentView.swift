@@ -29,6 +29,9 @@ struct ContentView: View {
                                 .foregroundColor(item.amount > 100 ? .red : .black)
                                 .font(.system(size: item.amount < 10 ? 14 : 16))
                         }
+                        .accessibilityElement(children: .ignore)
+                        .accessibilityLabel("\(item.name) \(item.amount) \(Locale.current.currencyCode)")
+                        .accessibilityHint(item.type)
                     }
                     .onDelete(perform: removeItems)
                 }
