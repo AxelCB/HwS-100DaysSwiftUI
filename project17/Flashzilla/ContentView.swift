@@ -45,7 +45,7 @@ struct ContentView: View {
             let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: Float(1 - i))
             let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: 1 + i)
             events.append(event)
-        }g
+        }
 
         // convert those events into a pattern and play it immediately
         do {
