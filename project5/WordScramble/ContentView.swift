@@ -66,6 +66,16 @@ struct ContentView: View {
             return
         }
 
+        guard answer.count < 3 else {
+            wordError(title: "Word too short", message: "Try to think of longer words")
+            return
+        }
+
+        guard answer != rootWord else {
+            wordError(title: "Question word used", message: "The given word doesn't count as an answer!")
+            return
+        }
+
         withAnimation {
             usedWords.insert(answer, at: 0)
         }
