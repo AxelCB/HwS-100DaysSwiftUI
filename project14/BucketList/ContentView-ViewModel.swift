@@ -17,6 +17,18 @@ extension ContentView {
         @Published private(set) var locations: [Location]
         @Published var selectedPlace: Location?
         @Published var isUnlocked = false
+        @Published var authenticationError: Error?
+
+        var isShowingError: Bool {
+            get {
+                authenticationError != nil
+            }
+            set {
+                if !newValue {
+                    authenticationError = nil
+                }
+            }
+        }
 
         init() {
             do {
@@ -67,7 +79,7 @@ extension ContentView {
                             self.isUnlocked = true
                         }
                     } else {
-                        // error
+                        self.authenticationError = authenticationError
                     }
                 }
             } else {
