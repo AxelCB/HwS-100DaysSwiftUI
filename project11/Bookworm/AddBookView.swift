@@ -16,6 +16,7 @@ struct AddBookView: View {
     @State private var rating = 3
     @State private var genre = "Fantasy"
     @State private var review = ""
+    @State private var showingInvalidAlert = false
 
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
 
@@ -42,6 +43,10 @@ struct AddBookView: View {
 
                 Section {
                     Button("Save") {
+                        guard validateBook() else {
+                            showingInvalidAlert = true
+                            return
+                        }
                         let newBook = Book(context: moc)
                         newBook.id = UUID()
                         newBook.title = title
@@ -56,7 +61,25 @@ struct AddBookView: View {
                 }
             }
             .navigationTitle("Add Book")
+            .alert("Invalid book", isPresented: $showingInvalidAlert) {
+                Button("Ok", role: .cancel) { }
+            } message: {
+                Text("Must complete all fields to save a book")
+            }
         }
+    }
+
+    private func validateBook() -> Bool {
+        title = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        author = author.trimmingCharacters(in: .whitespacesAndNewlines)
+        review = review.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !title.isEmpty, !author.isEmpty, !review.isEmpty else {
+            return false
+        }
+        guard genres.contains(genre) else {
+            return false
+        }
+        return true
     }
 }
 
