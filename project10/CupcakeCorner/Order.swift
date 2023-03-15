@@ -13,6 +13,19 @@ final class Order: ObservableObject {
         case strawberry
         case chocolate
         case rainbow
+
+        var order: Double {
+            switch self {
+            case .vanilla:
+                return 0
+            case .strawberry:
+                return 1
+            case .chocolate:
+                return 2
+            case .rainbow:
+                return 3
+            }
+        }
     }
 
     @Published var flavour = Flavour.vanilla
@@ -40,5 +53,25 @@ final class Order: ObservableObject {
         }
 
         return true
+    }
+
+    var cost: Double {
+        // $2 per cake
+        var cost = Double(quantity) * 2
+
+        // complicated cakes cost more
+        cost += (Double(flavour.order) / 2)
+
+        // $1/cake for extra frosting
+        if addExtraFrosting {
+            cost += Double(quantity)
+        }
+
+        // $0.50/cake for sprinkles
+        if addExtraSprinkles {
+            cost += Double(quantity) / 2
+        }
+
+        return cost
     }
 }
