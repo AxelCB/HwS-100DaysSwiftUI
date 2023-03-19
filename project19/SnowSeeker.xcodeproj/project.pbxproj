@@ -11,6 +11,7 @@
 		B3370E6229C25529007B2D1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3370E6129C25529007B2D1B /* ContentView.swift */; };
 		B3370E6429C2552A007B2D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3370E6329C2552A007B2D1B /* Assets.xcassets */; };
 		B3370E6729C2552A007B2D1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3370E6629C2552A007B2D1B /* Preview Assets.xcassets */; };
+		B3DA7BDE29C6961700ED391E /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = B3DA7BDD29C6961700ED391E /* resorts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		B3370E6129C25529007B2D1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3370E6329C2552A007B2D1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3370E6629C2552A007B2D1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3DA7BDD29C6961700ED391E /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				B3370E5F29C25529007B2D1B /* SnowSeekerApp.swift */,
 				B3370E6129C25529007B2D1B /* ContentView.swift */,
 				B3370E6329C2552A007B2D1B /* Assets.xcassets */,
+				B3DA7BDD29C6961700ED391E /* resorts.json */,
 				B3370E6529C2552A007B2D1B /* Preview Content */,
 			);
 			path = SnowSeeker;
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DA7BDE29C6961700ED391E /* resorts.json in Resources */,
 				B3370E6729C2552A007B2D1B /* Preview Assets.xcassets in Resources */,
 				B3370E6429C2552A007B2D1B /* Assets.xcassets in Resources */,
 			);
