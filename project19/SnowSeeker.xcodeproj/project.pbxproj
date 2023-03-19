@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B31AFD9C29C7100900823547 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31AFD9B29C7100900823547 /* WelcomeView.swift */; };
+		B31AFD9E29C7110D00823547 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31AFD9D29C7110D00823547 /* ResortView.swift */; };
 		B3370E6029C25529007B2D1B /* SnowSeekerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3370E5F29C25529007B2D1B /* SnowSeekerApp.swift */; };
 		B3370E6229C25529007B2D1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3370E6129C25529007B2D1B /* ContentView.swift */; };
 		B3370E6429C2552A007B2D1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3370E6329C2552A007B2D1B /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		B31AFD9B29C7100900823547 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		B31AFD9D29C7110D00823547 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = SOURCE_ROOT; };
 		B3370E5C29C25529007B2D1B /* SnowSeeker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowSeeker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3370E5F29C25529007B2D1B /* SnowSeekerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowSeekerApp.swift; sourceTree = "<group>"; };
 		B3370E6129C25529007B2D1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,7 +45,6 @@
 		B3370E5329C25529007B2D1B = {
 			isa = PBXGroup;
 			children = (
-				B31AFD9B29C7100900823547 /* WelcomeView.swift */,
 				B3370E5E29C25529007B2D1B /* SnowSeeker */,
 				B3370E5D29C25529007B2D1B /* Products */,
 			);
@@ -60,6 +61,8 @@
 		B3370E5E29C25529007B2D1B /* SnowSeeker */ = {
 			isa = PBXGroup;
 			children = (
+				B31AFD9B29C7100900823547 /* WelcomeView.swift */,
+				B31AFD9D29C7110D00823547 /* ResortView.swift */,
 				B3370E5F29C25529007B2D1B /* SnowSeekerApp.swift */,
 				B3370E6129C25529007B2D1B /* ContentView.swift */,
 				B3370E6329C2552A007B2D1B /* Assets.xcassets */,
@@ -153,6 +156,7 @@
 				B31AFD9C29C7100900823547 /* WelcomeView.swift in Sources */,
 				B3370E6229C25529007B2D1B /* ContentView.swift in Sources */,
 				B3DA7BE029C697CA00ED391E /* Resort.swift in Sources */,
+				B31AFD9E29C7110D00823547 /* ResortView.swift in Sources */,
 				B3370E6029C25529007B2D1B /* SnowSeekerApp.swift in Sources */,
 				B3DA7BE229C6981700ED391E /* Bundle-Decodable.swift in Sources */,
 			);
